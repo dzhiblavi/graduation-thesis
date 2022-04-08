@@ -1,0 +1,102 @@
+%&latex
+\chapter{Обзор}\label{overview}
+
+\section{Термины и понятия}\label{overview:terms}
+
+\begin{definition}\label{overview:formula}
+    \textbf{Булевой формулой} \footnote{https://ru.wikipedia.org/wiki/Булева\_формула} называется 
+    формула логики высказываний, сорержащая логические переменные и пропозициональные связки
+    $\wedge, \vee, \neg$. Множество логических переменных обозначается $V$.
+\end{definition}
+
+\begin{definition}
+    \textbf{Булевой функцией} называется отображение $E\colon~ \mathcal{B}^n \to \mathcal{B}$,
+    где $\mathcal{B} = \{\, 0, 1 \,\}$, а $n$ -- число различных переменных. Булева формула $F$ 
+    задает булеву функцию $E_F$. Далее разница между этими понятиями для нас несущественна, поэтому
+    всегда будет упоминаться булева функция $E$.
+\end{definition}
+
+\begin{definition}
+    \textbf{Задача булевой выполнимости (SAT)} --- проверить, существует ли $x \in \mathcal{B}$
+    такой, что выполняется $E(x) = 1$.
+\end{definition}
+
+\begin{theorem}(Кук, Левин)~\cite{bib:cook-levin}
+    \textit{Задача булевой выполнимости принадлежит классу NP-полных задач.}
+\end{theorem}
+
+\begin{definition}
+    \textbf{Решателем, алгоритмом A} называется алгоритм, принимающий на вход описание булевой формулы $C$
+    и выдающий результат проверки булевой выполнимости соответствующей булевой функции --- $A(C)$.
+    Возможны следующие результаты:
+    \begin{itemize}
+        \item \texttt{0}, функция невыполнима.
+        \item \texttt{1}, функция выполнима. В этом случае также может быть возвращено
+            удовлетворяющее функции назначение переменных $R$: $E(V \mid R) = 1$.
+        \item \texttt{?}, решатель не смог решить задачу либо вследствие его неполноты, либо
+            из-за нехватки ресурсов, таких как время или память.
+    \end{itemize}
+    Обозначим за $S(A)$ множество булевых функций, разрешимых алгоритмом $A$ за полиномиальное время.
+\end{definition}
+
+\begin{definition}
+    \textbf{Означиванием, подстановкой} набора переменных $B \subseteq V$ называется отображение
+    $\hat{b}\colon~ B \to \mathcal{B}$. Означивание можно применить к булевой функции $E$,
+    результатом будет другая булева функция $E[B \mid \hat{b}] \colon \mathcal{B}^{|V| - |B|} \to
+    \mathcal{B}$, возможно тождественная. Она получается из исходной путем частичной подстановки
+    переменных, назначенных функцией $\hat{b}$. Множество всех означиваний множества переменных
+    $B$ обозначается $\hat{B}$.
+\end{definition}
+
+\begin{definition}
+    \textbf{Лазейкой} называется множество $B \subseteq V$ такое, что для любого из $2^{|B|}$
+    означиваний $\hat{b}$ переменных из $B$ выполняется $E[B \mid \hat{b}] \equiv 0$.
+    Ясно, что если для функции $E$ существует лазейка, то она невыполнима, то есть $E \equiv 0$.
+\end{definition}
+
+
+\begin{definition}\label{overview:rho-backdoor}
+    \textbf{$\rho$-Лазейкой} называется множество $B \subseteq V$ такое, что выполняется
+\[
+    \left|\left\{\, \hat{b} \mid \hat{b} \in \hat{B},~ E[B \mid \hat{b}] \equiv 0 \,\right\}\right|
+    \geqslant \rho \cdot 2^{|B|}.
+\]
+\end{definition}
+
+\newcommand*{\prob}{\mathsf{Pr}}
+
+\begin{definition}\label{overview:prob-backdoor}
+    \textbf{$(\varepsilon, \delta)$ аппроксимация лазейки, вероятностная лазейка}. Зафиксируем
+    $\varepsilon, \delta \in (0, 1)$, пожмножество переменных $B \subseteq V$ и алгоритм $A$, 
+    и рассмотрим множество означиваний $\hat{B}$ в терминах $\rho$-лазейки.
+    \begin{itemize}
+        \item Введем на $\hat{B}$ равномерное распределение и зададим случайную величину
+            \[
+                \xi_B(\hat{b}) = \left[E[B \mid \hat{b}] \in S(A)\right].
+            \]
+            Ясно, что эта величина распределена по Бернулли с $p = \rho_B$.
+        \item Тогда $B$ является $(\varepsilon, \delta)$ аппроксимацией лазейки, если
+            \[
+                \prob{\left[1 - \varepsilon \leqslant \frac{1}{N}\sum_{j=1}^{N}{\xi_j}\right]}
+                \geqslant 1 - \delta,
+            \]
+            где $N \geqslant \frac{4 \ln{2/\delta}}{\varepsilon^2}$. Данное условие согласно
+            теореме Чернова TBD-REF обеспечивает тот факт, что аппроксимация $\rho_B$, 
+            вычисляемая по формуле 
+            \begin{equation}
+                \hat{\rho}_B = \frac{1}{N} \sum_{j=1}^{N}{\xi_j}\label{overview:rho-hat},
+            \end{equation}
+            отклоняется от истинного значения $\rho_B$ не более, чем на $\varepsilon$ с вероятностью 
+            не менее $1 - \delta$.
+    \end{itemize}
+\end{definition}
+
+\startrelatedwork
+
+\section{Последовательные решатели}\label{overview:sequential}
+
+\section{Параллельные решатели}\label{overview:parallel}
+
+\finishrelatedwork
+
+\chapterconclusion

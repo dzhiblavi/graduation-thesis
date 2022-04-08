@@ -1,0 +1,89 @@
+@inproceedings{bib:divide-and-conquer,
+    author = {Elffers, Jan and Nordström, Jakob},
+    year = {2018},
+    month = {07},
+    pages = {1291-1299},
+    title = {Divide and Conquer: Towards Faster Pseudo-Boolean Solving},
+    doi = {10.24963/ijcai.2018/180}
+}
+
+@inproceedings{bib:local-search,
+    abstract = {In this work we address the question of whether and how parallel local search exhibits the criticality and parallelism phenomenon when performed on structured instances. We experimentally show that also for structured instances there exists an optimal value of parallelism which enables the algorithm to reach the optimal performance and, by analyzing the frequency of node degree of the graphs associated with the SAT instances, we observe that an asymmetric and not regular distribution strongly affects the algorithm performance with respect to the parallelism.},
+    address = {Berlin, Heidelberg},
+    author = {Roli, Andrea},
+    booktitle = {Principles and Practice of Constraint Programming - CP 2002},
+    editor = {Van Hentenryck, Pascal},
+    isbn = {978-3-540-46135-7},
+    pages = {714--719},
+    publisher = {Springer Berlin Heidelberg},
+    title = {Criticality and Parallelism in Structured SAT Instances},
+    year = {2002}
+}
+
+
+@inproceedings{bib:dac-painless,
+    TITLE = {{Modular and Efficient Divide-and-Conquer SAT Solver on Top of the Painless Framework}},
+    AUTHOR = {Le Frioux, Ludovic and Baarir, Souheib and Sopena, Julien and Kordon, Fabrice},
+    URL = {https://hal.archives-ouvertes.fr/hal-02093520},
+    BOOKTITLE = {{TACAS 2019 - 25th International Conference on Tools and Algorithms for the Construction and Analysis of Systems}},
+    ADDRESS = {Prague, Czech Republic},
+    EDITOR = {Tom{\'a}{\v s} Vojnar and Lijun Zhang},
+    SERIES = {Lecture Notes in Computer Science},
+    VOLUME = {11427},
+    PAGES = {135-151},
+    YEAR = {2019},
+    MONTH = Apr,
+    DOI = {10.1007/978-3-030-17462-0\_8},
+    KEYWORDS = {Parallel satisfiability ; Tool ; SAT solver ; Divide-and-conquer},
+    HAL_ID = {hal-02093520},
+    HAL_VERSION = {v1},
+}
+
+@inproceedings{bib:hordesat-portfolio,
+    abstract = {A simple yet successful approach to parallel satisfiability (SAT) solving is to run several different (a portfolio of) SAT solvers on the input problem at the same time until one solver finds a solution. The SAT solvers in the portfolio can be instances of a single solver with different configuration settings. Additionally the solvers can exchange information usually in the form of clauses. In this paper we investigate whether this approach is applicable in the case of massively parallel SAT solving. Our solver is intended to run on clusters with thousands of processors, hence the name HordeSat. HordeSat is a fully distributed portfolio-based SAT solver with a modular design that allows it to use any SAT solver that implements a given interface. HordeSat has a decentralized design and features hierarchical parallelism with interleaved communication and search. We experimentally evaluated it using all the benchmark problems from the application tracks of the 2011 and 2014 International SAT Competitions. The experiments demonstrate that HordeSat is scalable up to hundreds or even thousands of processors achieving significant speedups especially for hard instances.},
+    address = {Cham},
+    author = {Balyo, Tom{\'a}{\v{s}} and Sanders, Peter and Sinz, Carsten},
+    booktitle = {Theory and Applications of Satisfiability Testing -- SAT 2015},
+    editor = {Heule, Marijn and Weaver, Sean},
+    isbn = {978-3-319-24318-4},
+    pages = {156--172},
+    publisher = {Springer International Publishing},
+    title = {HordeSat: A Massively Parallel Portfolio SAT Solver},
+    year = {2015}
+}
+
+
+@inproceedings{bib:painless,
+    TITLE = {{PaInleSS: a Framework for Parallel SAT Solving.}},
+    AUTHOR = { Le Frioux, Ludovic and Baarir, Souheib and Sopena, Julien and Kordon, Fabrice},
+    URL = {https://hal.archives-ouvertes.fr/hal-01540785},
+    BOOKTITLE = {{The 20th International Conference on Theory and Applications of Satisfiability Testing}},
+    ADDRESS = {Melbourne, Australia},
+    PUBLISHER = {{Springer}},
+    SERIES = {Lecture Notes in Computer Science},
+    VOLUME = {10491},
+    PAGES = {233-250},
+    YEAR = {2017},
+    MONTH = Aug,
+    DOI = {10.1007/978-3-319-66263-3\_15},
+    HAL_ID = {hal-01540785},
+    HAL_VERSION = {v1},
+}
+
+@inproceedings{bib:painless-sharing,
+    TITLE = {{Community and LBD-Based Clause Sharing Policy for Parallel SAT Solving}},
+    AUTHOR = {Vallade, Vincent and Le Frioux, Ludovic and Baarir, Souheib and Sopena, Julien and Ganesh, Vijay and Kordon, Fabrice},
+    URL = {https://hal.inria.fr/hal-02906505},
+    NOTE = {Due to the coronavirus COVID-19 pandemic, the conference was held virtually.},
+    BOOKTITLE = {{SAT 2020 - 23rd International Conference on Theory and Applications of Satisfiability Testing}},
+    ADDRESS = {Alghero / Virtual, Italy},
+    SERIES = {Lecture Notes in Computer Science},
+    VOLUME = {12178},
+    PAGES = {11-27},
+    YEAR = {2020},
+    MONTH = Jul,
+    DOI = {10.1007/978-3-030-51825-7\_2},
+    HAL_ID = {hal-02906505},
+    HAL_VERSION = {v1},
+}
+
