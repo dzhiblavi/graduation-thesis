@@ -3,7 +3,8 @@
     title = {Satisfability suggested format},
     year = 1993,
     url = {https://www.domagoj-babic.com/uploads/ResearchProjects/Spear/dimacs-cnf.pdf},
-    urldate = {2022-04-07}
+    urldate = {2022-04-07},
+    langid = {english}
 }
 
 @inproceedings{bib:cook-levin,
@@ -12,5 +13,276 @@
     booktitle = {IN STOC},
     year = {1971},
     pages = {151--158},
-    publisher = {ACM}
+    publisher = {ACM},
+    langid = {english}
 }
+
+@inproceedings{bib:cdcl,
+    abstract = {The classical NP-complete problem of Boolean Satisfiability (SAT) has seen much interest in not just the theoretical computer science community, but also in areas where practical solutions to this problem enable significant practical applications. Since the first development of the basic search based algorithm proposed by Davis, Putnam, Logemann and Loveland (DPLL) about forty years ago, this area has seen active research effort with many interesting contributions that have culminated in state-of-the-art SAT solvers today being able to handle problem instances with thousands, and in same cases even millions, of variables. In this paper we examine some of the main ideas along this passage that have led to our current capabilities. Given the depth of the literature in this field, it is impossible to do this in any comprehensive way; rather we focus on techniques with consistent demonstrated efficiency in available solvers. For the most part, we focus on techniques within the basic DPLL search framework, but also briefly describe other approaches and look at some possible future research directions.},
+    address = {Berlin, Heidelberg},
+    author = {Zhang, Lintao and Malik, Sharad},
+    booktitle = {Computer Aided Verification},
+    editor = {Brinksma, Ed and Larsen, Kim Guldstrand},
+    isbn = {978-3-540-45657-5},
+    pages = {17--36},
+    publisher = {Springer Berlin Heidelberg},
+    title = {The Quest for Efficient Boolean Satisfiability Solvers},
+    year = {2002},
+    langid = {english}
+}
+
+@article{bib:dpll-1,
+    author = {Davis, Martin and Logemann, George and Loveland, Donald},
+    title = {A Machine Program for Theorem-Proving},
+    year = {1962},
+    issue_date = {July 1962},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    volume = {5},
+    number = {7},
+    issn = {0001-0782},
+    url = {https://doi.org/10.1145/368273.368557},
+    doi = {10.1145/368273.368557},
+    abstract = {The programming of a proof procedure is discussed in connection with trial runs and possible improvements.},
+    journal = {Commun. ACM},
+    month = {jul},
+    pages = {394–397},
+    numpages = {4},
+    langid = {english}
+}
+
+@article{bib:dpll-2,
+    author = {Davis, Martin and Putnam, Hilary},
+    title = {A Computing Procedure for Quantification Theory},
+    year = {1960},
+    issue_date = {July 1960},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    volume = {7},
+    number = {3},
+    issn = {0004-5411},
+    url = {https://doi.org/10.1145/321033.321034},
+    doi = {10.1145/321033.321034},
+    abstract = {The hope that mathematical methods employed in the investigation of formal logic would lead to purely computational methods for obtaining mathematical theorems goes back to Leibniz and has been revived by Peano around the turn of the century and by Hilbert's school in the 1920's. Hilbert, noting that all of classical mathematics could be formalized within quantification theory, declared that the problem of finding an algorithm for determining whether or not a given formula of quantification theory is valid was the central problem of mathematical logic. And indeed, at one time it seemed as if investigations of this “decision” problem were on the verge of success. However, it was shown by Church and by Turing that such an algorithm can not exist. This result led to considerable pessimism regarding the possibility of using modern digital computers in deciding significant mathematical questions. However, recently there has been a revival of interest in the whole question. Specifically, it has been realized that while no decision procedure exists for quantification theory there are many proof procedures available—that is, uniform procedures which will ultimately locate a proof for any formula of quantification theory which is valid but which will usually involve seeking “forever” in the case of a formula which is not valid—and that some of these proof procedures could well turn out to be feasible for use with modern computing machinery.Hao Wang [9] and P. C. Gilmore [3] have each produced working programs which employ proof procedures in quantification theory. Gilmore's program employs a form of a basic theorem of mathematical logic due to Herbrand, and Wang's makes use of a formulation of quantification theory related to those studied by Gentzen. However, both programs encounter decisive difficulties with any but the simplest formulas of quantification theory, in connection with methods of doing propositional calculus. Wang's program, because of its use of Gentzen-like methods, involves exponentiation on the total number of truth-functional connectives, whereas Gilmore's program, using normal forms, involves exponentiation on the number of clauses present. Both methods are superior in many cases to truth table methods which involve exponentiation on the total number of variables present, and represent important initial contributions, but both run into difficulty with some fairly simple examples.In the present paper, a uniform proof procedure for quantification theory is given which is feasible for use with some rather complicated formulas and which does not ordinarily lead to exponentiation. The superiority of the present procedure over those previously available is indicated in part by the fact that a formula on which Gilmore's routine for the IBM 704 causes the machine to computer for 21 minutes without obtaining a result was worked successfully by hand computation using the present method in 30 minutes. Cf. §6, below.It should be mentioned that, before it can be hoped to employ proof procedures for quantification theory in obtaining proofs of theorems belonging to “genuine” mathematics, finite axiomatizations, which are “short,” must be obtained for various branches of mathematics. This last question will not be pursued further here; cf., however, Davis and Putnam [2], where one solution to this problem is given for ele},
+    journal = {J. ACM},
+    month = {jul},
+    pages = {201–215},
+    numpages = {15},
+    langid = {english}
+}
+
+@inproceedings{bib:minisat,
+    abstract = {In this article, we present a small, complete, and efficient SAT-solver in the style of conflict-driven learning, as exemplified by Chaff. We aim to give sufficient details about implementation to enable the reader to construct his or her own solver in a very short time. This will allow users of SAT-solvers to make domain specific extensions or adaptions of current state-of-the-art SAT-techniques, to meet the needs of a particular application area. The presented solver is designed with this in mind, and includes among other things a mechanism for adding arbitrary boolean constraints. It also supports solving a series of related SAT-problems efficiently by an incremental SAT-interface.},
+    address = {Berlin, Heidelberg},
+    author = {E{\'e}n, Niklas and S{\"o}rensson, Niklas},
+    booktitle = {Theory and Applications of Satisfiability Testing},
+    editor = {Giunchiglia, Enrico and Tacchella, Armando},
+    isbn = {978-3-540-24605-3},
+    pages = {502--518},
+    publisher = {Springer Berlin Heidelberg},
+    title = {An Extensible SAT-solver},
+    year = {2004},
+    langid = {english}
+}
+
+@online{bib:maplecomsps,
+    author = {Jia Hui Liang and Chanseok Oh and Vijay Ganesh and Krzysztof Czarnecki and Pascal Poupart},
+    title = {MapleCOMSPS, MapleCOMSPS\_LRB, MapleCOMSPS\_CHB},
+    year = 2016,
+    url = {https://docs.google.com/a/gsd.uwaterloo.ca/viewer?a=v\&pid=sites\&srcid=Z3NkLnV3YXRlcmxvby5jYXxtYXBsZXNhdHxneDo2YWEzYjEzN2JmY2I1YzYz},
+    urldate = {2022-04-07},
+    langid = {english}
+}
+
+@inproceedings{bib:minisat-elim,
+    title={Effective Preprocessing in SAT Through Variable and Clause Elimination},
+    author={Niklas E{\'e}n and Armin Biere},
+    booktitle={SAT},
+    year={2005},
+    langid = {english}
+}
+
+
+@TECHREPORT{bib:minisat-strengthen,
+    author = {Niklas Sörensson and Niklas Een},
+    title = {MiniSat v1.13 - A SAT solver with conflict-clause minimization. 2005. SAT-2005 Poster. 1 Perhaps under a generous notion of “part-time”, but still concurrently taking a statistics course and leading a normal life},
+    institution = {},
+    year = {2002},
+    langid = {english}
+}
+
+@article{bib:use-rsa,
+    title={RSA private key reconstruction from random bits using SAT solvers},
+    author={Constantinos Patsakis},
+    journal={IACR Cryptol. ePrint Arch.},
+    year={2013},
+    volume={2013},
+    pages={26},
+    langid = {english}
+}
+
+@misc{bib:use-bma,
+    doi = {10.48550/ARXIV.2106.10105},
+    url = {https://arxiv.org/abs/2106.10105},
+    author = {Avellaneda, Florent and Villemaire, Roger},
+    keywords = {Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences},
+    title = {Boolean Matrix Factorization with SAT and MaxSAT},
+    publisher = {arXiv},
+    year = {2021},
+    copyright = {Creative Commons Attribution Non Commercial Share Alike 4.0 International},
+    langid = {english}
+}
+
+@article{bib:use-ojs,
+	author = {Miyuki KOSHIMURA and Hidetomo NABESHIMA and Hiroshi FUJITA and Ryuzo HASEGAWA},
+	doi = {10.1587/transinf.E93.D.2316},
+	journal = {IEICE Transactions on Information and Systems},
+	number = {8},
+	pages = {2316-2318},
+	title = {Solving Open Job-Shop Scheduling Problems by SAT Encoding},
+	volume = {E93.D},
+	year = {2010},
+	Bdsk-Url-1 = {https://doi.org/10.1587/transinf.E93.D.2316},
+    langid = {english}
+}
+
+@inproceedings{bib:use-mc,
+	abstract = {Model checking is a formal technique for automatically verifying that a finite-state model satisfies a temporal property. In model checking, generally Binary Decision Diagrams (BDDs) are used to efficiently encode the transition relation of the finite-state model. Recently model checking algorithms based on Boolean satisfiability (SAT) procedures have been developed to complement the traditional BDD-based model checking. These algorithms can be broadly classified into three categories: (1) bounded model checking which is useful for finding failures (2) hybrid algorithms that combine SAT and BDD based methods for unbounded model checking, and (3) purely SAT-based unbounded model checking algorithms. The goal of this paper is to provide a uniform and comprehensive basis for evaluating these algorithms. The paper describes eight bounded and unbounded techniques, and analyzes the performance of these algorithms on a large and diverse set of hardware benchmarks.},
+	address = {Berlin, Heidelberg},
+	author = {Amla, Nina and Du, Xiaoqun and Kuehlmann, Andreas and Kurshan, Robert P. and McMillan, Kenneth L.},
+	booktitle = {Correct Hardware Design and Verification Methods},
+	editor = {Borrione, Dominique and Paul, Wolfgang},
+	isbn = {978-3-540-32030-2},
+	pages = {254--268},
+	publisher = {Springer Berlin Heidelberg},
+	title = {An Analysis of SAT-Based Model Checking Techniques in an Industrial Environment},
+	year = {2005},
+    langid = {english}
+}
+
+@inproceedings{bib:divide-and-conquer,
+    author = {Elffers, Jan and Nordström, Jakob},
+    year = {2018},
+    month = {07},
+    pages = {1291-1299},
+    title = {Divide and Conquer: Towards Faster Pseudo-Boolean Solving},
+    doi = {10.24963/ijcai.2018/180},
+    langid = {english}
+}
+
+@inproceedings{bib:local-search,
+    abstract = {In this work we address the question of whether and how parallel local search exhibits the criticality and parallelism phenomenon when performed on structured instances. We experimentally show that also for structured instances there exists an optimal value of parallelism which enables the algorithm to reach the optimal performance and, by analyzing the frequency of node degree of the graphs associated with the SAT instances, we observe that an asymmetric and not regular distribution strongly affects the algorithm performance with respect to the parallelism.},
+    address = {Berlin, Heidelberg},
+    author = {Roli, Andrea},
+    booktitle = {Principles and Practice of Constraint Programming - CP 2002},
+    editor = {Van Hentenryck, Pascal},
+    isbn = {978-3-540-46135-7},
+    pages = {714--719},
+    publisher = {Springer Berlin Heidelberg},
+    title = {Criticality and Parallelism in Structured SAT Instances},
+    year = {2002},
+    langid = {english}
+}
+
+
+@inproceedings{bib:dac-painless,
+    TITLE = {{Modular and Efficient Divide-and-Conquer SAT Solver on Top of the Painless Framework}},
+    AUTHOR = {Le Frioux, Ludovic and Baarir, Souheib and Sopena, Julien and Kordon, Fabrice},
+    URL = {https://hal.archives-ouvertes.fr/hal-02093520},
+    BOOKTITLE = {{TACAS 2019 - 25th International Conference on Tools and Algorithms for the Construction and Analysis of Systems}},
+    ADDRESS = {Prague, Czech Republic},
+    EDITOR = {Tom{\'a}{\v s} Vojnar and Lijun Zhang},
+    SERIES = {Lecture Notes in Computer Science},
+    VOLUME = {11427},
+    PAGES = {135-151},
+    YEAR = {2019},
+    MONTH = Apr,
+    DOI = {10.1007/978-3-030-17462-0\_8},
+    KEYWORDS = {Parallel satisfiability ; Tool ; SAT solver ; Divide-and-conquer},
+    HAL_ID = {hal-02093520},
+    HAL_VERSION = {v1},
+    langid = {english}
+}
+
+@inproceedings{bib:hordesat-portfolio,
+    abstract = {A simple yet successful approach to parallel satisfiability (SAT) solving is to run several different (a portfolio of) SAT solvers on the input problem at the same time until one solver finds a solution. The SAT solvers in the portfolio can be instances of a single solver with different configuration settings. Additionally the solvers can exchange information usually in the form of clauses. In this paper we investigate whether this approach is applicable in the case of massively parallel SAT solving. Our solver is intended to run on clusters with thousands of processors, hence the name HordeSat. HordeSat is a fully distributed portfolio-based SAT solver with a modular design that allows it to use any SAT solver that implements a given interface. HordeSat has a decentralized design and features hierarchical parallelism with interleaved communication and search. We experimentally evaluated it using all the benchmark problems from the application tracks of the 2011 and 2014 International SAT Competitions. The experiments demonstrate that HordeSat is scalable up to hundreds or even thousands of processors achieving significant speedups especially for hard instances.},
+    address = {Cham},
+    author = {Balyo, Tom{\'a}{\v{s}} and Sanders, Peter and Sinz, Carsten},
+    booktitle = {Theory and Applications of Satisfiability Testing -- SAT 2015},
+    editor = {Heule, Marijn and Weaver, Sean},
+    isbn = {978-3-319-24318-4},
+    pages = {156--172},
+    publisher = {Springer International Publishing},
+    title = {HordeSat: A Massively Parallel Portfolio SAT Solver},
+    year = {2015},
+    langid = {english}
+}
+
+
+@inproceedings{bib:painless,
+    TITLE = {{PaInleSS: a Framework for Parallel SAT Solving.}},
+    AUTHOR = { Le Frioux, Ludovic and Baarir, Souheib and Sopena, Julien and Kordon, Fabrice},
+    URL = {https://hal.archives-ouvertes.fr/hal-01540785},
+    BOOKTITLE = {{The 20th International Conference on Theory and Applications of Satisfiability Testing}},
+    ADDRESS = {Melbourne, Australia},
+    PUBLISHER = {{Springer}},
+    SERIES = {Lecture Notes in Computer Science},
+    VOLUME = {10491},
+    PAGES = {233-250},
+    YEAR = {2017},
+    MONTH = Aug,
+    DOI = {10.1007/978-3-319-66263-3\_15},
+    HAL_ID = {hal-01540785},
+    HAL_VERSION = {v1},
+    langid = {english}
+}
+
+@inproceedings{bib:painless-sharing,
+    TITLE = {{Community and LBD-Based Clause Sharing Policy for Parallel SAT Solving}},
+    AUTHOR = {Vallade, Vincent and Le Frioux, Ludovic and Baarir, Souheib and Sopena, Julien and Ganesh, Vijay and Kordon, Fabrice},
+    URL = {https://hal.inria.fr/hal-02906505},
+    NOTE = {Due to the coronavirus COVID-19 pandemic, the conference was held virtually.},
+    BOOKTITLE = {{SAT 2020 - 23rd International Conference on Theory and Applications of Satisfiability Testing}},
+    ADDRESS = {Alghero / Virtual, Italy},
+    SERIES = {Lecture Notes in Computer Science},
+    VOLUME = {12178},
+    PAGES = {11-27},
+    YEAR = {2020},
+    MONTH = Jul,
+    DOI = {10.1007/978-3-030-51825-7\_2},
+    HAL_ID = {hal-02906505},
+    HAL_VERSION = {v1},
+    langid = {english}
+}
+
+@online{bib:doerr,
+    year        = {2015},
+    title       = {Optimal Parameter Choices Through Self-Adjustment: Applying the 1/5-th Rule in
+                   Discrete Settings},
+    author      = {Benjamin Doerr and Carola Doerr},
+    url         = {http://arxiv.org/abs/1504.03212},
+    year        = {2015},
+    langid      = {english}
+}
+
+@article{bib:ea,
+    author = {Borisovsky, Pavel and Eremeev, Anton},
+    year = {2003},
+    month = {01},
+    pages = {},
+    title = {A Study on Performance of the (1+1)-Evolutionary Algorithm},
+    volume = {7},
+    langid = {english}
+}
+
+@article{bib:ga,
+    author = {Lingaraj, Haldurai},
+    year = {2016},
+    month = {10},
+    pages = {139-143},
+    title = {A Study on Genetic Algorithm and its Applications},
+    volume = {4},
+    journal = {International Journal of Computer Sciences and Engineering},
+    langid = {english}
+}
+

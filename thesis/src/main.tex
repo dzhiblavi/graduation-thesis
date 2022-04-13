@@ -8,19 +8,22 @@
 %% - languages={...} - устанавливает перечень используемых языков. По умолчанию это {english,russian}.
 %%                     Последний из языков определяет текст основного документа.
 
+\usepackage{mathabx}
 \usepackage{icomma}
 \usepackage{tabularx}
 \usepackage{tikz}
 \usetikzlibrary{arrows}
 
 \addbibresource{bibliography/common.bib}
-\addbibresource{bibliography/evolutionary.bib}
-\addbibresource{bibliography/parallel.bib}
-\addbibresource{bibliography/sat-usages.bib}
-\addbibresource{bibliography/sequential.bib}
 \graphicspath{ {../assets/} }
 
+\newcommand\tbd[1]{\textcolor{red}{#1}}
+
 \begin{document}
+
+\begin{center}
+    \large{\textbf{\tbd{DRAFT~\today}}}
+\end{center}
 
 \studygroup{M3439}
 \title{Разработка параллельных алгоритмов решения задачи булевой выполнимости с использованием 
@@ -49,30 +52,33 @@
     эффективности с существующими конкурентоспособными алгоритмами.}
 
 %% Исходные материалы и пособия
-\plannedsources{\begin{enumerate}
-        \item TBD.
-    \end{enumerate}}
+\plannedsources{
+    \begin{enumerate}
+        \item \tbd{ресурсы из ИЗ}.
+    \end{enumerate}
+}
 
 %% Цель исследования
-\researchaim{TBD}
+\researchaim{\tbd{цель}}
 
 %% Задачи, решаемые в ВКР
 \researchtargets{\begin{enumerate}
         \item разработка эффективных алгоритмов поиска вероятностных лазеек.
-        \item разработка методов решения задачи булевой выполнимости с применением вероятностных 
+        \item разработка методов решения задачи булевой выполнимости с применением вероятностных
             лаззек.
         \item исследование эффективности полученных алгоритмов.
+        \item \tbd{Здесь возможно надо более подробный план или вообще просто про "крутой решатель"?}
     \end{enumerate}}
 
 %% Использование современных пакетов компьютерных программ и технологий
-\addadvancedsoftware{Что}{Раздел работы}
+\addadvancedsoftware{\tbd{пакеты}}{\tbd{где}}
 
 %% Краткая характеристика полученных результатов
-\researchsummary{TBD}
+\researchsummary{\tbd{оценка результатов}}
 
-\researchfunding{TBD}
+\researchfunding{\tbd{вроде не было}}
 
-\researchpublications{TBD}
+\researchpublications{\tbd{вроде не было, если не считать paper}}
 
 \maketitle{Бакалавр}
 
